@@ -1,5 +1,7 @@
 .h-slider {
+    position: relative;
     &__item {
+        position: relative;
         width: 100%;
         height: 798px;
         background-size: cover;
@@ -14,6 +16,71 @@
                 height: 100%;
                 background: #5e5e5e;
                 opacity: .6;
+            }
+        }
+    }
+    &__descr {
+        position: absolute;
+        width: 50%;
+        height: auto;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+    &__h2 {
+        color: #fff;
+        font-size: 62px;
+        font-weight: normal;
+        span {
+            font-weight: bold;
+        }
+    }
+    &__p {
+        font-size: 48px;
+        color: #fff;
+        span {
+            font-weight: light;
+            color: #0feb9e;
+        }
+        &._decor {
+            position: relative;
+            display: inline-block;
+            font-size: 18px;
+            &::before,
+            &::after {
+                position: absolute;
+                content: '';
+                left: -25%;
+                top: 10px;
+                width: 30px;
+                height: 1px;
+                background: #0feb9e;
+            }
+            &::after {
+                left: auto;
+                right: -25%;
+            }
+        }
+    }
+    // owl styling
+    .owl-dots {
+        position: absolute;
+        margin-top: 0 !important;
+        right: 50px;
+        top: 50%;
+        .owl-dot {
+            display: block;
+            margin: 15px 0;
+            span {
+                border: 1px solid #8e8e8e;
+                background: transparent;
+            }
+            &.active {
+                span {
+                    background: #fff;
+                    border: 1px solid #8e8e8e;
+                }
             }
         }
     }

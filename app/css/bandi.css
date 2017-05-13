@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Open Sans', sans-serif;
 }
 li {
   list-style: none;
@@ -25,6 +26,11 @@ img {
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+.center {
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
 }
 .clearfix:after {
   content: "";
@@ -57,7 +63,11 @@ img {
   font-size: 18px;
   text-overflow: ellipsis;
 }
+.h-slider {
+  position: relative;
+}
 .h-slider__item {
+  position: relative;
   width: 100%;
   height: 798px;
   background-size: cover;
@@ -72,4 +82,153 @@ img {
   height: 100%;
   background: #5e5e5e;
   opacity: .6;
+}
+.h-slider__descr {
+  position: absolute;
+  width: 50%;
+  height: auto;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  text-align: center;
+}
+.h-slider__h2 {
+  color: #fff;
+  font-size: 62px;
+  font-weight: normal;
+}
+.h-slider__h2 span {
+  font-weight: bold;
+}
+.h-slider__p {
+  font-size: 48px;
+  color: #fff;
+}
+.h-slider__p span {
+  font-weight: light;
+  color: #0feb9e;
+}
+.h-slider__p._decor {
+  position: relative;
+  display: inline-block;
+  font-size: 18px;
+}
+.h-slider__p._decor::before,
+.h-slider__p._decor::after {
+  position: absolute;
+  content: '';
+  left: -25%;
+  top: 10px;
+  width: 30px;
+  height: 1px;
+  background: #0feb9e;
+}
+.h-slider__p._decor::after {
+  left: auto;
+  right: -25%;
+}
+.h-slider .owl-dots {
+  position: absolute;
+  margin-top: 0 !important;
+  right: 50px;
+  top: 50%;
+}
+.h-slider .owl-dots .owl-dot {
+  display: block;
+  margin: 15px 0;
+}
+.h-slider .owl-dots .owl-dot span {
+  border: 1px solid #8e8e8e;
+  background: transparent;
+}
+.h-slider .owl-dots .owl-dot.active span {
+  background: #fff;
+  border: 1px solid #8e8e8e;
+}
+.header {
+  position: relative;
+}
+.h-nav {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.3);
+}
+.h-nav__wrapper {
+  display: table;
+}
+.h-nav__logo {
+  display: table-cell;
+  vertical-align: middle;
+}
+.h-nav__logo a {
+  color: #b1b1b1;
+}
+.h-nav__logo a span {
+  position: relative;
+  padding-left: 50px;
+  vertical-align: super;
+}
+.h-nav__logo a span::before {
+  position: absolute;
+  content: '';
+  left: 25px;
+  top: 0;
+  width: 1px;
+  height: 20px;
+  background: #b1b1b1;
+}
+.h-nav__nav {
+  display: table-cell;
+  text-align: right;
+}
+.nav-list li {
+  display: inline-block;
+  vertical-align: top;
+}
+.nav-list li a {
+  position: relative;
+  display: block;
+  padding: 25px 17.5px;
+  text-align: center;
+  color: #fff;
+  -webkit-transition: .3s;
+  transition: .3s;
+  z-index: 1;
+}
+.nav-list li a::after {
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: .4s;
+  transition: .4s;
+  z-index: -1;
+}
+.nav-list li a:hover::after {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+.nav-list li.active a {
+  position: relative;
+  background: #000;
+}
+.nav-list li.active a::before {
+  position: absolute;
+  content: '';
+  top: 1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: red;
 }

@@ -1,0 +1,39 @@
+.header {
+    position: relative;
+}
+
+.h-nav {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background: rgba(0,0,0, .3);
+    &__wrapper {
+        display: table;
+    }
+    &__logo {
+        display: table-cell;
+        vertical-align: middle;
+        a {
+            color: #b1b1b1;
+            span {
+                position: relative;
+                padding-left: 50px;
+                vertical-align: super;
+                &::before {
+                    position: absolute;
+                    content: '';
+                    left: 25px;
+                    top: 0;
+                    width: 1px;
+                    height: 20px;
+                    background: #b1b1b1;
+                }
+            }
+        }
+    }
+    &__nav {
+        display: table-cell;
+        text-align: right;
+    }
+}
