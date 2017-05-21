@@ -5,6 +5,12 @@ $(document).ready(function () {
         nav:false,
         dots: true,
     });
+    $('.features__slider').owlCarousel({
+        items: 3,
+        loop: true,
+        nav:false,
+        dots: true,
+    });
     // for last word in h2
     $('.h-slider__h2').each(function(){
         var ths = $(this);

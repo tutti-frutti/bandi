@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Open Sans', sans-serif;
+  line-height: 1.5;
 }
 li {
   list-style: none;
@@ -63,6 +64,25 @@ img {
   font-size: 18px;
   text-overflow: ellipsis;
 }
+.socials li {
+  display: inline-block;
+  vertical-align: top;
+}
+.socials li a {
+  display: block;
+  padding: 5px;
+  font-size: 14px;
+  font-weight: normal;
+  color: rgba(255, 255, 255, 0.5);
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+.socials li:hover a {
+  -webkit-transform: scale(1.3);
+      -ms-transform: scale(1.3);
+          transform: scale(1.3);
+  color: #ffffff;
+}
 .h-slider {
   position: relative;
 }
@@ -88,7 +108,7 @@ img {
   width: 50%;
   height: auto;
   left: 50%;
-  bottom: 0;
+  bottom: 30px;
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -120,7 +140,7 @@ img {
   position: absolute;
   content: '';
   left: -25%;
-  top: 10px;
+  top: 12px;
   width: 30px;
   height: 1px;
   background: #0feb9e;
@@ -128,6 +148,9 @@ img {
 .h-slider__p._decor::after {
   left: auto;
   right: -25%;
+}
+.h-slider__social {
+  margin-top: 50px;
 }
 .h-slider .owl-dots {
   position: absolute;
@@ -231,4 +254,52 @@ img {
   right: 0;
   height: 2px;
   background: red;
+}
+.section-top {
+  font-size: 28px;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+  color: #0eb493;
+}
+.section-top span {
+  position: relative;
+  display: inline-block;
+  padding: 0 25px;
+  line-height: 0;
+  color: #dce1e5;
+}
+.section-top span::before,
+.section-top span::after {
+  position: absolute;
+  content: '';
+  top: 10px;
+  left: -110px;
+  display: inline-block;
+  width: 110px;
+  height: 1px;
+  background: #dce1e5;
+}
+.section-top span::after {
+  left: auto;
+  right: -110px;
+}
+.features__item span {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 15px;
+  width: 10.5%;
+  line-height: 40px;
+  text-align: center;
+  border: 1px solid #000;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+}
+.features__descr {
+  display: inline-block;
+  vertical-align: top;
+  width: 80%;
+}
+.features__descr h3 {
+  margin-bottom: 20px;
 }
