@@ -1,0 +1,54 @@
+.isotope {
+    text-align: center;
+    .iso-nav {
+        margin: 20px 0 35px;
+        ul {
+            text-align: center;
+            li {
+                .dib(top);
+                padding: 5px 15px;
+                margin-right: 50px;
+                font-size: 14px;
+                font-weight: bold;
+                cursor: pointer;
+                color: #000;
+                &.active {
+                    border-radius: 5px;
+                    color: #fff;
+                    background: @green;
+                }
+            }
+        }
+    }
+    .main-iso {
+        max-width: 1600px;
+        margin: 0 auto;
+        .iso-item {
+            .dib(top);
+            position: relative;
+            max-width: 400px;
+            height: 299px;
+            transition: all .3s;
+            a {
+                position: absolute;
+                content: '';
+                display: block;
+                left: 0;
+                right: 0;
+                height: 100%;
+                transition: all .3s;
+                span {
+                    opacity: 0;
+                }
+            }
+            &:hover {
+                a {
+                    background: red;
+                }
+                span {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

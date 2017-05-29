@@ -25,7 +25,8 @@ gulp.task('scripts', function () {
     return gulp.src([
         'app/libs/jquery/dist/jquery.min.js',
         'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js',
-        'app/libs/owl.carousel/dist/owl.carousel.min.js'
+        'app/libs/owl.carousel/dist/owl.carousel.min.js',
+        'app/libs/isotope/dist/isotope.pkgd.min.js'
     ])
         .pipe(concat('libs.min.js'))
         .pipe(uglify())
