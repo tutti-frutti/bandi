@@ -37,17 +37,45 @@
                 right: 0;
                 height: 100%;
                 transition: all .3s;
+                color: #fff;
+                i {
+                    .dib(top);
+                    padding: 0 5px;
+                    width: 40px;
+                    line-height: 40px;
+                    border-radius: 50%;
+                    text-align: center;
+                    border: 1px solid #fff;
+                    color: #fff;
+                }
                 span {
+                    opacity: 0;
+                    transition: .3s;
+                }
+                u {
+                    .dib(top);
+                    width: 100%;
+                    text-decoration: none;
+                    font-weight: bold;
+                    transition: .3s;
                     opacity: 0;
                 }
             }
             &:hover {
                 a {
-                    background: red;
+                    background: rgba(32,180,148, .8);
                 }
                 span {
                     opacity: 1;
                 }
+                u {
+                    opacity: 1;
+                }
+            }
+            .hover-text {
+                position: relative;
+                top: 35%;
+                display: inline-block;
             }
         }
     }
