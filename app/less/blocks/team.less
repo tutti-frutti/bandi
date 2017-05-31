@@ -6,9 +6,11 @@
         span.block {
             position: relative;
             display: block;
+            padding: 0 20px;
             width: 270px;
             height: 300px;
             overflow: hidden;
+            text-align: center;
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
@@ -18,9 +20,47 @@
                 left: 0;
                 right: 0;
                 height: 100%;
-                background: #000;
+                background: rgba(32, 180, 148, .8);
                 z-index: 1;
+                transition: .3s;
                 opacity: 0;
+            }
+            span {
+                position: relative;
+                display: inline-block;
+                padding: 20px 0;
+                font-size: 16px;
+                font-weight: bold;
+                color: #fff;
+                transition: .3s;
+                opacity: 0;
+            }
+            span.socials {
+                position: absolute;
+                display: block;
+                bottom: 0;
+                a {
+                    display: block;
+                    color: #fff;
+                }
+            }
+            u {
+                position: relative;
+                text-decoration: none;
+                color: #fff;
+                transition: .3s;
+                opacity: 0;
+            }
+            &:hover {
+                &::before,
+                span,
+                u {
+                    opacity: 1;
+                }
+                span,
+                u {
+                    z-index: 1;
+                }
             }
         }
     }

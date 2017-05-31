@@ -418,9 +418,11 @@ img {
 .team__item span.block {
   position: relative;
   display: block;
+  padding: 0 20px;
   width: 270px;
   height: 300px;
   overflow: hidden;
+  text-align: center;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -431,7 +433,46 @@ img {
   left: 0;
   right: 0;
   height: 100%;
-  background: #000;
+  background: rgba(32, 180, 148, 0.8);
   z-index: 1;
+  -webkit-transition: .3s;
+  transition: .3s;
   opacity: 0;
+}
+.team__item span.block span {
+  position: relative;
+  display: inline-block;
+  padding: 20px 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  -webkit-transition: .3s;
+  transition: .3s;
+  opacity: 0;
+}
+.team__item span.block span.socials {
+  position: absolute;
+  display: block;
+  bottom: 0;
+}
+.team__item span.block span.socials a {
+  display: block;
+  color: #fff;
+}
+.team__item span.block u {
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  -webkit-transition: .3s;
+  transition: .3s;
+  opacity: 0;
+}
+.team__item span.block:hover::before,
+.team__item span.block:hover span,
+.team__item span.block:hover u {
+  opacity: 1;
+}
+.team__item span.block:hover span,
+.team__item span.block:hover u {
+  z-index: 1;
 }
