@@ -11,7 +11,7 @@ $(document).ready(function () {
         nav: false,
         dots: true,
     });
-     $('.team__slider').owlCarousel({
+    $('.team__slider').owlCarousel({
         items: 4,
         loop: true,
         nav: false,
@@ -28,15 +28,36 @@ $(document).ready(function () {
         layoutMode: 'fitRows'
     });
     // Isotope click function
-    $('.iso-nav ul li').click(function(){
+    $('.iso-nav ul li').click(function () {
         $('.iso-nav ul li').removeClass('active');
         $(this).addClass('active');
-        
+
         var selector = $(this).attr('data-filter');
         $('.main-iso').isotope({
             filter: selector
         });
         return false;
+    });
+
+    $('.counter').each(function () {
+        var $this = $(this),
+            countTo = $this.attr('data-count');
+
+        $({
+            countNum: $this.text()
+        }).animate({
+                countNum: countTo
+            },
+            {
+                duration: 8000,
+                easing: 'linear',
+                step: function () {
+                    $this.text(Math.floor(this.countNum));
+                },
+                complete: function () {
+                    $this.text(this.countNum);
+                }
+            });
     });
 
 });

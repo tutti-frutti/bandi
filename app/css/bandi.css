@@ -33,6 +33,9 @@ img {
   width: 100%;
   margin: 0 auto;
 }
+.center.narrow {
+  max-width: 1030px;
+}
 .clearfix:after {
   content: "";
   display: table;
@@ -297,6 +300,9 @@ img {
   font-weight: 600;
   color: #062033;
 }
+.section-top._white h2 {
+  color: #fff;
+}
 .features {
   padding-bottom: 45px;
 }
@@ -475,4 +481,64 @@ img {
 .team__item span.block:hover span,
 .team__item span.block:hover u {
   z-index: 1;
+}
+.numbs {
+  padding: 100px 0 150px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+.numbs._overlay::before {
+  position: absolute;
+  content: '';
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 100%;
+  background: rgba(6, 32, 51, 0.8);
+}
+.numbs__inner {
+  position: relative;
+  z-index: 1;
+}
+.numbs ul {
+  font-size: 0;
+  text-align: justify;
+}
+.numbs ul::after {
+  display: inline-block;
+  content: '';
+  width: 100%;
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+.numbs ul li {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+}
+.numbs ul li i {
+  display: inline-block;
+  vertical-align: top;
+  width: 130px;
+  height: 130px;
+  border: 1px solid #fff;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  text-align: center;
+  font-size: 45px;
+  line-height: 130px;
+  color: #fff;
+}
+.numbs ul li .numb {
+  font-size: 60px;
+  font-weight: 500;
+  color: #fff;
+}
+.numbs ul li p {
+  font-size: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
 }
