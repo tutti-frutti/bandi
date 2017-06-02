@@ -542,3 +542,54 @@ img {
   text-transform: uppercase;
   color: #fff;
 }
+.feedback__contacts,
+.feedback__fields,
+.feedback__social {
+  display: inline-block;
+  vertical-align: top;
+}
+.feedback__contacts {
+  max-width: 300px;
+  width: 100%;
+}
+.feedback__contacts h4 {
+  margin-bottom: 35px;
+  font-size: 22px;
+  color: #062033;
+}
+.feedback__contacts ul li,
+.feedback__contacts ul a {
+  font-size: 13px;
+  color: #6a737b;
+}
+.feedback__fields {
+  max-width: 770px;
+  width: 100%;
+  font-size: 0;
+}
+.feedback__fields h4 {
+  margin-bottom: 45px;
+  font-size: 24px;
+  color: #062033;
+}
+.feedback__text,
+.feedback__email {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 6%;
+  width: 47%;
+}
+.feedback__text input,
+.feedback__email input {
+  width: 100%;
+}
+.feedback__email {
+  margin-right: 0;
+}
+.feedback__message {
+  margin: 30px 0;
+  width: 100%;
+}
+.feedback__message input {
+  width: 100%;
+}
