@@ -106,27 +106,27 @@
     </header>
 
     <main>
-        <section class="features" style="background: #f4f7f9;">
-            <div class="section-top">
+        <section class="features" data-wow-duration="2s" style="background: #f4f7f9;">
+            <div class="section-top wow fadeInDown" data-wow-duration="1s">
                 <h2>Features</h2>
                 <span><i class="fa fa-heart-o"></i></span>
             </div>
             <div class="owl-carousel owl-theme features__slider center">
-                <div class="features__item">
+                <div class="features__item wow fadeInLeft" data-wow-duration="1s">
                     <span><i class="fa fa-globe"></i></span>
                     <div class="features__descr">
                         <h3>Branding</h3>
                         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
                     </div>
                 </div>
-                <div class="features__item">
+                <div class="features__item wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
                     <span><i class="fa fa-database"></i></span>
                     <div class="features__descr">
                         <h3>Database</h3>
                         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
                     </div>
                 </div>
-                <div class="features__item">
+                <div class="features__item wow fadeInLeft" data-wow-duration="1s" data-wow-delay="2s">
                     <span><i class="fa fa-cloud"></i></span>
                     <div class="features__descr">
                         <h3>Cloud</h3>
@@ -184,7 +184,7 @@
                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
             </div>
             <div class="owl-carousel owl-theme team__slider center">
-                <div class="team__item">
+                <div class="team__item wow slideInLeft" data-wow-duration="1s" data-wow-delay="2s">
                     <a href="#">
                         <span class="block" style="background-image: url(img/face1.jpg)">
                             <span>Nemo enim ipsam voluptatem quia voluptas</span>
@@ -199,7 +199,7 @@
                         </span>
                     </a>
                 </div>
-                <div class="team__item">
+                <div class="team__item wow slideInLeft" data-wow-duration="1s">
                     <a href="#">
                         <span class="block" style="background-image: url(img/face2.jpg)">
                             <span>Nemo enim ipsam voluptatem quia voluptas</span>
@@ -212,7 +212,7 @@
                         </span>
                     </a>
                 </div>
-                <div class="team__item">
+                <div class="team__item wow slideInRight" data-wow-duration="1s">
                     <a href="#">
                         <span class="block" style="background-image: url(img/face3.jpg)">
                             <span>Nemo enim ipsam voluptatem quia voluptas</span>
@@ -225,7 +225,7 @@
                         </span>
                     </a>
                 </div>
-                <div class="team__item">
+                <div class="team__item wow slideInRight" data-wow-duration="1s" data-wow-delay="2s">
                     <a href="#">
                         <span class="block" style="background-image: url(img/face4.jpg)">
                             <span>Nemo enim ipsam voluptatem quia voluptas</span>
@@ -305,16 +305,19 @@
                     <div class="feedback__form">
                         <form action="post">
                             <div class="feedback__text">
-                                <input type="text" name="" id="">
+                                <label for="u-name">Name</label>
+                                <input type="text" name="" id="u-name">
                             </div>
                             <div class="feedback__email">
-                                <input type="email" name="" id="">
+                                <label for="u-email">Email</label>
+                                <input type="email" name="" id="u-email">
                             </div>
                             <div class="feedback__message">
-                                <input type="text" name="" id="">
+                                <label for="u-message">Message</label>
+                                <input type="text" name="" id="u-message">
                             </div>
                             <div class="feedback__button">
-                                <button type="submit">Send message</button>
+                                <button type="submit" class="send-btn"><i class="fa fa-envelope-o"></i>Send message</button>
                             </div>
                         </form>
                     </div>
@@ -330,9 +333,55 @@
                 </div>
             </div>
         </section>
+        <section class="map">
+            <div class="map__block _overlay">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d412508.18615264894!2d-115.45519467178585!3d36.12467374623518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80beb782a4f57dd1%3A0x3accd5e6d5b379a3!2z0JvQsNGBLdCS0LXQs9Cw0YEsINCd0LXQstCw0LTQsCwg0KHQqNCQ!5e0!3m2!1sru!2sua!4v1496494805851" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+        </section>
     </main>
 
-    <footer></footer>
+    <footer>
+        <div class="footer">
+            <div class="footer__inner center">
+                <div class="footer__text">
+                    <a href="#">
+                        <img src="img/Brandi-h-logo.png" alt="Brandi">
+                    </a>
+                    <p>eusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                </div>
+                <div class="footer__subscribe">
+                    <h5>Subscribe</h5>
+                    <div class="footer__field">
+                        <form action="post">
+                            <input type="text">
+                            <button type="submit"><i class="fa fa-long-arrow-right"></i></button>
+                        </form>
+                    </div>
+                    <p>eusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                </div>
+                <div class="footer__explore">
+                    <h5>Explore</h5>
+                    <ul>
+                        <li><a href="#">Envato</a></li>
+                        <li><a href="#">Themeforest</a></li>
+                        <li><a href="#">Themecurve</a></li>
+                        <li><a href="#">Microsoft</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">Kreativeshowcase</a></li>
+                        <li><a href="#">Google</a></li>
+                        <li><a href="#">Freebiescurve</a></li>
+                        <li><a href="#">Yahoo</a></li>
+                    </ul>
+                </div>
+                <div class="footer__copyright">
+                    <p>Created with <i class="fa fa-heart-o"></i> by brandi, <br> exclusive for kreativeshowcase</p>
+                    <p><i class="fa fa-copyright"></i>2014 Brandi. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="js/libs.min.js"></script>
     <script src="js/common.js"></script>

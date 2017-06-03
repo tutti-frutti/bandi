@@ -27,7 +27,7 @@ gulp.task('scripts', function () {
         'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js',
         'app/libs/owl.carousel/dist/owl.carousel.min.js',
         'app/libs/isotope/dist/isotope.pkgd.min.js',
-        'app/libs/simpleCounter-master/jQuerySimpleCounter.js'
+        'app/libs/wow/dist/wow.min.js'
     ])
         .pipe(concat('libs.min.js'))
         .pipe(uglify())

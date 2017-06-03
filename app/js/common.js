@@ -39,25 +39,48 @@ $(document).ready(function () {
         return false;
     });
 
-    $('.counter').each(function () {
-        var $this = $(this),
-            countTo = $this.attr('data-count');
 
-        $({
-            countNum: $this.text()
-        }).animate({
-                countNum: countTo
-            },
-            {
-                duration: 8000,
-                easing: 'linear',
-                step: function () {
-                    $this.text(Math.floor(this.countNum));
-                },
-                complete: function () {
-                    $this.text(this.countNum);
-                }
-            });
+
+    new WOW().init();
+
+    $(function () {
+        var blockTop = $('.numbs').offset().top;
+        var CountUpFlag = 0;
+        var $window = $(window);
+        $window.on('load scroll', function () {
+            var top = $window.scrollTop();
+            var height = $window.height();
+            if (top + height >= blockTop && CountUpFlag == 0) {
+                CountUp();
+                CountUpFlag = 1;
+            }
+        });
+
+        function CountUp() {
+            $('.numbs').addClass('show');
+            if ($('.numbs').hasClass('show')) {
+                $('.counter').each(function () {
+                    var $this = $(this),
+                        countTo = $this.attr('data-count');
+
+                    $({
+                        countNum: $this.text()
+                    }).animate({
+                        countNum: countTo
+                    }, {
+                        delay: 5000,
+                        duration: 10000,
+                        easing: 'linear',
+                        step: function () {
+                            $this.text(Math.floor(this.countNum));
+                        },
+                        complete: function () {
+                            $this.text(this.countNum);
+                        }
+                    });
+                });
+            }
+        }
     });
 
 });
