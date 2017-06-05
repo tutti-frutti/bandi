@@ -83,4 +83,29 @@ $(document).ready(function () {
         }
     });
 
+    $('.nav-list').on('click', 'a', function (e) {
+        e.preventDefault();
+        var id = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body, html').animate({
+            scrollTop: top
+        }, 1500);
+    });
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            $('#scrollToTop').fadeIn();
+        } else {
+            $('#scrollToTop').fadeOut();
+        }
+    });
+
+    //Click event to scroll to top
+    $('#scrollToTop').click(function () {
+        $('html, body').animate({
+            scrollTop: 0
+        }, 1800);
+        return false;
+    });
+
 });

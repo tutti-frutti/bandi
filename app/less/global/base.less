@@ -9,7 +9,14 @@ li {
     list-style: none;
 }
 
-ul, h1, h2, h3, h4, h5, h6, p {
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
     padding: 0;
     margin: 0;
 }
@@ -25,6 +32,7 @@ img {
 * {
     box-sizing: border-box;
 }
+
 .center {
     max-width: 1170px;
     width: 100%;
@@ -32,9 +40,9 @@ img {
     &.narrow {
         max-width: 1030px;
     }
-//    @media #{$tablet} {
-//        width: 98%;
-//    }
+    //    @media #{$tablet} {
+    //        width: 98%;
+    //    }
 }
 
 .clearfix:after {
@@ -48,25 +56,35 @@ img {
     color: #434343;
     font-size: 18px;
     text-overflow: ellipsis;
-    }
-::-moz-placeholder          {
-    font-family: 'Calibri';
-    color: #434343;
-    font-size: 18px;
-    text-overflow: ellipsis;
-    }/* Firefox 19+ */
-:-moz-placeholder           {
-    font-family: 'Calibri';
-    color: #434343;
-    font-size: 18px;
-    text-overflow: ellipsis;
-}/* Firefox 18- */
-    :-ms-input-placeholder      {
-    font-family: 'Calibri';
-    color: #434343;
-    font-size: 18px;
-    text-overflow:ellipsis;
 }
+
+::-moz-placeholder {
+    font-family: 'Calibri';
+    color: #434343;
+    font-size: 18px;
+    text-overflow: ellipsis;
+}
+
+
+/* Firefox 19+ */
+
+:-moz-placeholder {
+    font-family: 'Calibri';
+    color: #434343;
+    font-size: 18px;
+    text-overflow: ellipsis;
+}
+
+
+/* Firefox 18- */
+
+:-ms-input-placeholder {
+    font-family: 'Calibri';
+    color: #434343;
+    font-size: 18px;
+    text-overflow: ellipsis;
+}
+
 // socials
 .socials {
     li {
@@ -81,10 +99,28 @@ img {
         }
         &:hover {
             a {
-//                font-size: 16px;
+                //                font-size: 16px;
                 transform: scale(1.3);
                 color: rgba(255, 255, 255, 1);
             }
         }
     }
+}
+
+.up-button {
+    position: fixed;
+    display: none;
+    width: 30px;
+    height: 30px;
+    line-height: 28px;
+    top: 80%;
+    right: 2%;
+    text-align: center;
+    background: gray;
+    color: #fff;
+    z-index: 100;
+}
+
+.up-button:hover {
+    opacity: .5;
 }
