@@ -27,11 +27,17 @@
         bottom: 30px;
         transform: translateX(-50%);
         text-align: center;
+        @media (max-width: 767px) {
+            width: 90%;
+        }
     }
     &__h2 {
         color: #fff;
         font-size: 62px;
         font-weight: normal;
+        @media (max-width: 767px) {
+            font-size: 40px;
+        }
         span {
             font-weight: bold;
         }
@@ -39,6 +45,9 @@
     &__p {
         font-size: 48px;
         color: #fff;
+        @media (max-width: 767px) {
+            font-size: 30px;
+        }
         span {
             font-weight: light;
             color: #0feb9e;
@@ -47,6 +56,9 @@
             position: relative;
             display: inline-block;
             font-size: 18px;
+            @media (max-width: 767px) {
+                font-size: 16px;
+            }
             &::before,
             &::after {
                 position: absolute;

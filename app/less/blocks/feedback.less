@@ -1,5 +1,15 @@
 .feedback {
     margin-bottom: 90px;
+    @media (max-width: @desktop) {
+        width: 95%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    &__block {
+        @media (max-width: @mobile) {
+            text-align: center;
+        }
+    }
     &__contacts,
     &__fields,
     &__social {
@@ -8,6 +18,11 @@
     &__contacts {
         max-width: 300px;
         width: 100%;
+        @media (max-width: @desktop) {
+            max-width: none;
+            width: 100%;
+            text-align: center;
+        }
         h4 {
             margin-bottom: 35px;
             font-size: 22px;
@@ -26,6 +41,15 @@
         max-width: 770px;
         width: 100%;
         font-size: 0;
+        @media (max-width: @desktop) {
+            margin: 0 auto;
+            max-width: none;
+            width: 95%;
+            margin-right: 0;
+        }
+        @media (max-width: @mobile) {
+            margin-right: 0;
+        }
         h4 {
             margin-bottom: 45px;
             font-size: 24px;
@@ -82,11 +106,20 @@
         }
     }
     &__social {
+        @media (max-width: @desktop) {
+            display: block;
+            margin-bottom: 20px;
+        }
         ul {
             margin-top: 20px;
         }
         li {
             margin-bottom: 15px;
+            
+            @media (max-width: @desktop) {
+                .dib(vat);
+                margin: 10px 15px;
+            }
             &:hover {
                 i {
                     color: #757575;
@@ -101,13 +134,14 @@
     }
     &__button {
         text-align: right;
+        @media (max-width: @tablet) {
+            text-align: center;
+        }
         button {
             padding: 5px;
             font-size: 16px;
             text-align: center;
             border: none;
-            //            color: #000;
-            //            border: 1px solid transparent;
             border-radius: 5px;
             background: transparent;
             cursor: pointer;
@@ -117,9 +151,6 @@
                 font-size: 20px;
                 vertical-align: bottom;
                 color: #1ea78d;
-            }
-            &:hover {
-                //                border: 1px solid #1ea78d;
             }
         }
     }
@@ -134,7 +165,6 @@
         top: 100%;
         left: 5px;
         right: 5px;
-//        width: 100%;
         height: 1px;
         transition: opacity 0.3s, transform 0.3s;
         background: @d-green;

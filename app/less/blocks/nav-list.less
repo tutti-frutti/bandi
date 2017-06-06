@@ -1,4 +1,7 @@
 .nav-list {
+    @media (max-width: 767px) {
+        text-align: center;
+    }
     li {
         .dib(top);
         a {
@@ -9,6 +12,10 @@
             color: #fff;
             transition: .3s;
             z-index: 1;
+            @media (max-width: 767px) {
+                padding: 15px 10px;
+                font-size: 14px;
+            }
             &::after {
                 position: absolute;
                 content: '';

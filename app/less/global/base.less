@@ -37,12 +37,15 @@ img {
     max-width: 1170px;
     width: 100%;
     margin: 0 auto;
+    @media (max-width: @desktop) {
+            width: 98%;
+        }
     &.narrow {
         max-width: 1030px;
+        @media (max-width: @tablet) {
+            width: 95%;
+        }
     }
-    //    @media #{$tablet} {
-    //        width: 98%;
-    //    }
 }
 
 .clearfix:after {
@@ -119,6 +122,9 @@ img {
     background: gray;
     color: #fff;
     z-index: 100;
+    @media (max-width: @mobile) {
+        right: 8%;
+    }
 }
 
 .up-button:hover {
